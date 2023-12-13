@@ -25,7 +25,7 @@ update_nvim_dir() {
   nvim_dir="$HOME/.config/nvim";
 
   show_check_message "${nvim_dir} exists?";
-  warning_message "you will update ${nvim_dir}";
+  show_warning_message "you will update ${nvim_dir}";
 
   ask_confirmation "update ${nvim_dir} ?";
   rm -rf "${nvim_dir}";

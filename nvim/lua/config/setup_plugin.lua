@@ -11,8 +11,31 @@ vim.cmd('packadd vim-jetpack')
 -- Assuming jetpack.paq is a module that manages plugins
 local paq = require('jetpack.paq')
 paq {
-  -- Add plugins here
-  {'tani/vim-jetpack', opt = true}, -- bootstrap
+  -- Bootstrap Plugin Manager
+  {
+    'tani/vim-jetpack',
+    opt = true
+  },
+  -- Color Scheme
   'navarasu/onedark.nvim',
-  {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'},
+  -- Set Color to Code
+  {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  },
+  -- File Explorer
+  {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+       'nvim-tree/nvim-web-devicons',
+    },
+  },
+  -- File Search Engine
+  'nvim-lua/plenary.nvim',
+  {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.0'
+  },
+  -- File Icon
+  'nvim-tree/nvim-web-devicons',
 }

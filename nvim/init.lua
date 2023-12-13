@@ -1,4 +1,6 @@
 require ('config/basic')
 require ('config/key_mapping')
-require ('config/setup_plugin_manager')
+require ('config/setup_plugin')
 require ('config/plugins/color_scheme')
+require ('config/plugins/nvim_tree')
+require ('config/plugins/nvim_web_devicons')
