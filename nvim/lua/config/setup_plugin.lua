@@ -38,4 +38,13 @@ paq {
   },
   -- File Icon
   'nvim-tree/nvim-web-devicons',
+  -- Status Line
+  {
+    'nvim-lualine/lualine.nvim',
+    requires = 'kyazdani42/nvim-web-devicons'
+  },
+  -- Lsp
+  {'neoclide/coc.nvim', branch='release'},
+  -- underlines word under cursor
+  'yamatsum/nvim-cursorline',
 }
