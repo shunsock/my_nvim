@@ -1,3 +1,7 @@
+-- set ; as leaderkey
+vim.g.mapleader = ";"
+vim.g.maplocalleader = ";"
+
 -- Escape from insert mode with jj
 vim.api.nvim_set_keymap("i", "jj", "<ESC>", { noremap = true, silent = true })
 
