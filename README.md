@@ -14,5 +14,6 @@ brew install neovim
 ## Getting Started
 
 ```bash
+// open your file name
 nvim your_file_name
 ```

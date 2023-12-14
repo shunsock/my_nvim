@@ -15,3 +15,12 @@ vim.api.nvim_set_keymap("v", "<S-K>", "y<Esc>P", { noremap = true, silent = true
 -- nvim-tree.lua plugin --
 -------------------------
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {silent=true})
+
+
+------------------------
+-- telescope plugin --
+------------------------
+vim.keymap.set("n", "<leader>ff", ":Telescope find_files", {})
+
+vim.keymap.set("n", "<Leader><C-f>", ":Telescope find_files hidden=true<CR>", {})
+

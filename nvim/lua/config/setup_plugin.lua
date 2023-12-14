@@ -1,15 +1,26 @@
+-------------------------------------------------------
 -- Automatically download Plugin Manager
+-- if it doesn't exist
+-- Plugin Manager: vim-jetpack
+-- GitHub        : https://github.com/tani/vim-jetpack
+-------------------------------------------------------
 local jetpackfile = vim.fn.stdpath('data') .. '/site/pack/jetpack/opt/vim-jetpack/plugin/jetpack.vim'
 local jetpackurl = "https://raw.githubusercontent.com/tani/vim-jetpack/master/plugin/jetpack.vim"
+
 if vim.fn.filereadable(jetpackfile) == 0 then
   vim.fn.system(string.format('curl -fsSLo %s --create-dirs %s', jetpackfile, jetpackurl))
 end
 
+
+------------------------------------------------------
 -- Load vim-jetpack
+------------------------------------------------------
 vim.cmd('packadd vim-jetpack')
 
 -- Assuming jetpack.paq is a module that manages plugins
 local paq = require('jetpack.paq')
+
+-- Add plugins inside the table
 paq {
   -- Name: vim-jetpack
   -- Feature: Bootstrap Plugin Manager
@@ -52,8 +63,9 @@ paq {
   'nvim-lua/plenary.nvim',
   {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.0'
+    tag = '0.1.2',
   },
+  { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
 
   -- Name: nvim-web-devicons
   -- Feature: File Icon
@@ -102,4 +114,43 @@ paq {
 
   -- Name: nvim-colorizer.lua
   -- Feature: show color background of color code
+  -- GitHub: https://github.com/norcalli/nvim-colorizer.lua
+  {
+    'norcalli/nvim-colorizer.lua',
+  },
+
+  -- Name: gitsigns.nvim
+  -- Feature: show git diff
+  -- GitHub: https://github.com/lewis6991/gitsigns.nvim
+  {
+    'lewis6991/gitsigns.nvim',
+  },
+
+  -- Name: auto-save.nvim
+  -- Feature: auto save file
+  -- GitHub: https://github.com/pocco81/auto-save.nvim
+  {
+    'pocco81/auto-save.nvim',
+  },
+
+  -- Name: bufferline.nvim
+  -- Feature: show buffer line
+  -- GitHub: https://github.com/akinsho/bufferline.nvim
+  {
+    'akinsho/bufferline.nvim',
+  },
+
+  -- Name: nvim-autopairs
+  -- Feature: auto complete bracket
+  -- GitHub: https://github.com/windwp/nvim-autopairs
+  {
+    'windwp/nvim-autopairs',
+  },
+
+  -- Name: mini.indentscope
+  -- Feature: show indent scope
+  -- GitHub: https://github.com/echasnovski/mini.nvim
+  {
+    'echasnovski/mini.indentscope',
+  },
 }
