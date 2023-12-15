@@ -153,4 +153,11 @@ paq {
   {
     'echasnovski/mini.indentscope',
   },
+
+  -- Name: copilot.vim
+  -- Feature: auto complete code
+  -- GitHub: https://github.com/github/copilot.vim
+  {
+    'github/copilot.vim',
+  },
 }
