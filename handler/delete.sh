@@ -5,8 +5,9 @@ source ./handler/helper/check_last_exit_status.sh;
 source ./handler/helper/message.sh;
 
 check_nvim_dir_exists() {
-  show_start_message "check nvim dir exists";
   nvim_dir="$HOME/.config/nvim"
+
+  show_start_message "check nvim dir exists";
 
   show_check_message "${nvim_dir} exists?";
   if [ -d "${nvim_dir}" ]; then
@@ -21,8 +22,9 @@ check_nvim_dir_exists() {
 }
 
 delete_nvim_dir() {
-  show_start_message "delete nvim dir";
   nvim_dir="$HOME/.config/nvim"
+
+  show_start_message "delete nvim dir";
 
   show_check_message "${nvim_dir} exists?";
 

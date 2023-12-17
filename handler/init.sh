@@ -31,6 +31,7 @@ create_nvim_dir() {
 
     ask_confirmation "overwrite ${nvim_dir}?";
 
+    rm -rf "${nvim_dir}";
     cp -r ./nvim "${nvim_dir}";
     check_last_exit_status "create nvim dir";
 
