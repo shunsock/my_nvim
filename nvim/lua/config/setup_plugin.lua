@@ -29,10 +29,6 @@ paq {
     opt = true
   },
 
-  {
-    'yeddaif/neovim-purple',
-  },
-
   -- Name: nvim-treesitter
   -- Feature: Set Better Highlight
   -- GitHub: https://github.com/nvim-treesitter/nvim-treesitter
@@ -156,4 +152,8 @@ paq {
   {
     'github/copilot.vim',
   },
+
+  {
+    "catppuccin/nvim"
+  }
 }
