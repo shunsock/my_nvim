@@ -79,3 +79,7 @@ vim.opt.wildmode = "list:longest,full"
 
 -- Search wraps around the end of the file
 vim.opt.wrapscan = true
+
+vim.opt.termguicolors = true
+
+vim.g.nobackground = 1
