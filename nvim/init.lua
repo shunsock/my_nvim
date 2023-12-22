@@ -6,7 +6,6 @@ require ('config/key_mapping')
 require ('config/setup_plugin')
 
 -- Plugins
-require ('config/plugins/color_scheme')
 require ('config/plugins/nvim_tree')
 require ('config/plugins/nvim_web_devicons')
 require('config/plugins/lualine')
@@ -16,3 +15,5 @@ require('config/plugins/nvim_colorizer')
 require('config/plugins/gitsigns_nvim')
 require('config/plugins/auto_save_nvim')
 require('config/plugins/bufferline_nvim')
+require('config/plugins/coc_nvim')
+require('config/plugins/color_theme')
