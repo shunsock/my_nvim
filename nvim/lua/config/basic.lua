@@ -81,3 +81,5 @@ vim.opt.wildmode = "list:longest,full"
 vim.opt.wrapscan = true
 
 vim.opt.termguicolors = true
+
+vim.g.nobackground = 1
